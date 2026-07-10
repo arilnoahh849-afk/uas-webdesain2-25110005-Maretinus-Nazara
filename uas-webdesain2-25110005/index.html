@@ -1,11 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pairing Coffee Pekanbaru</title>
+    <!-- Jalur CSS Bootstrap 4.5.3 Lokal -->
+    <link rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+    <!-- NAVBAR WITH COLLAPSE FEATURE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="index.html">☕ Pairing Coffee PKU</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BOOTSTRAP CAROUSEL FEATURE -->
+    <div id="pkuCoffeeCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#pkuCoffeeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#pkuCoffeeCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active slide-1">
+                <div class="carousel-caption d-none d-md-block filter-shadow p-4 rounded">
+                    <h1 class="display-4 font-weight-bold">Pelopor Pairing Coffee di Pekanbaru</h1>
+                    <p class="lead">Rasakan simfoni rasa sempurna dari kombinasi biji kopi pilihan dan kue pelengkap.</p>
+                </div>
+            </div>
+            <div class="carousel-item slide-2">
+                <div class="carousel-caption d-none d-md-block filter-shadow p-4 rounded">
+                    <h1 class="display-4 font-weight-bold">Ruang Nyaman & Tenang</h1>
+                    <p class="lead">Sudut terbaik di Pekanbaru untuk menyelesaikan tugas kuliah, kerja, atau sekadar berkumpul.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#pkuCoffeeCarousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#pkuCoffeeCarousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <!-- GRID HIGHLIGHT (Mendukung col-xs/col-12 hingga col-lg) -->
+    <div class="container my-5">
+        <div class="row text-center">
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
+                <div class="card p-4 shadow-sm border-0 h-100 interaction-card">
+                    <h3 class="h5 font-weight-bold mb-3">Freshly Roasted</h3>
+                    <p class="text-muted mb-0">Biji kopi asli nusantara yang dipanggang segar untuk menjaga kompleksitas rasa di setiap cangkir.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
+                <div class="card p-4 shadow-sm border-0 h-100 interaction-card">
+                    <h3 class="h5 font-weight-bold mb-3">Seni Menjodohkan Rasa</h3>
+                    <p class="text-muted mb-0">Dipandu oleh barista berpengalaman untuk menemukan kudapan pendamping yang memperkuat rasa kopi Anda.</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 mb-4">
+                <div class="card p-4 shadow-sm border-0 h-100 interaction-card">
+                    <h3 class="h5 font-weight-bold mb-3">Atmosfer Lokal</h3>
+                    <p class="text-muted mb-0">Sentuhan interior hangat yang dirancang ramah untuk komunitas kreatif dan produktif di Kota Bertuah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-auto">
+        <p class="mb-0">&copy; 2026 Pairing Coffee Pekanbaru. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS Dependencies Online (Slim jQuery & Popper diperlukan untuk Bootstrap 4) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <!-- Jalur JS Bootstrap 4.5.3 Lokal -->
+    <script src="bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>

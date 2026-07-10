@@ -1,0 +1,68 @@
+/* Pengaturan Layout Dasar */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #faf7f2;
+    color: #42362c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-warm-brown {
+    color: #59473c;
+}
+
+/* CAROUSEL IMAGE HEIGHT CONTROL */
+.slide-1, .slide-2 {
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.slide-1 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200');
+}
+.slide-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=1200');
+}
+
+.filter-shadow {
+    background: rgba(46, 37, 30, 0.85);
+}
+
+/* TRANSISI DAN EFEK HOVER KARTU */
+.interaction-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.interaction-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(66, 54, 44, 0.16) !important;
+}
+
+/* MODIFIKASI TABS ACTIVE & TOMBOL */
+.nav-tabs .nav-link {
+    color: #42362c;
+}
+.nav-tabs .nav-link.active {
+    color: #bc8a5f !important;
+    border-color: #dee2e6 #dee2e6 #faf7f2;
+}
+
+.btn-warning {
+    background-color: #bc8a5f;
+    border-color: #bc8a5f;
+}
+.btn-warning:hover {
+    background-color: #966b47;
+    border-color: #966b47;
+}
+
+/* PEMBATAS MAKSIMAL FRAME PETA */
+.map-frame-box {
+    max-height: 420px;
+    border-radius: 6px;
+    overflow: hidden;
+}
