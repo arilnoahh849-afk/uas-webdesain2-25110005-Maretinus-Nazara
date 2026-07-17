@@ -1,0 +1,41 @@
+/* Custom Styles for Pairing Coffee */
+
+body {
+    background-color: #fcf9f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Kustomisasi Carousel */
+.carousel-item {
+    height: 70vh;
+    min-height: 400px;
+    background-no-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-dark-trans {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Navigasi Tabs Custom */
+.nav-tabs .nav-link.active {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+    font-weight: bold;
+    border-color: #ffc107;
+}
+
+.nav-tabs .nav-link {
+    color: #495057;
+}
+
+/* Responsive utility backup jika versi lama browser butuh col-xs manual */
+@media (max-width: 575.98px) {
+    .col-xs-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
