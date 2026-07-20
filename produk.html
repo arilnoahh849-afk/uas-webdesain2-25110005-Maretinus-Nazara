@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Pairing Coffee</title>
+    <!-- Bootstrap 4.5.3 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- FontAwesome untuk ikon menarik -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan Khusus Halaman Produk */
+        .product-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .custom-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #ffffff;
+        }
+
+        .custom-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        /* Efek Zoom Halus pada Gambar */
+        .img-container {
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .custom-card:hover .img-container img {
+            transform: scale(1.1);
+        }
+
+        /* Desain Filter Kategori */
+        .filter-btn {
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn.active {
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.4);
+        }
+
+        /* Lencana Harga */
+        .price-tag {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #856404;
+        }
+
+        .btn-order {
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR COLLAPSE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold text-warning" href="index.html">☕Pairing Coffee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER PRODUK -->
+    <div class="product-header mb-5">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Menu Sajian Kami</h1>
+            <p class="lead">Dipasangkan dengan cinta, disajikan dengan cita rasa sempurna untuk menemani harimu.</p>
+        </div>
+    </div>
+
+    <!-- FILTER KATEGORI -->
+    <div class="container mb-5 text-center">
+        <div class="btn-group flex-wrap justify-content-center" role="group" aria-label="Kategori Menu">
+            <button type="button" class="btn btn-outline-warning text-dark filter-btn active" onclick="filterMenu('semua')">Semua Menu</button>
+            <button type="button" class="btn btn-outline-warning text-dark filter-btn" onclick="filterMenu('coffee')">Coffee</button>
+            <button type="button" class="btn btn-outline-warning text-dark filter-btn" onclick="filterMenu('resto')">Resto (Makanan)</button>
+        </div>
+    </div>
+
+    <!-- DAFTAR PRODUK (GRID) -->
+    <div class="container my-5">
+        <div class="row" id="menuContainer">
+            
+            <!-- Produk 1 (Coffee) -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 menu-item coffee">
+                <div class="card h-100 custom-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=300" alt="Espresso">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge badge-light text-muted mb-2"><i class="fas fa-coffee text-warning mr-1"></i> Coffee</span>
+                            <h5 class="card-title font-weight-bold">Es Kopi Susu Pairing</h5>
+                            <p class="card-text text-muted small">Kopi espresso premium dipadukan susu segar dan gula aren asli Riau.</p>
+                        </div>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="price-tag">Rp 23.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Pairing%20Coffee%2C%20saya%20ingin%20memesan%20Es%20Kopi%20Susu%20Pairing" target="_blank" class="btn btn-warning btn-block btn-order text-dark">
+                                <i class="fab fa-whatsapp mr-1"></i> Pesan Cepat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 2 (Coffee) -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 menu-item coffee">
+                <div class="card h-100 custom-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=300" alt="V60 Manual Brew">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge badge-light text-muted mb-2"><i class="fas fa-coffee text-warning mr-1"></i> Coffee</span>
+                            <h5 class="card-title font-weight-bold">V60 Manual Brew</h5>
+                            <p class="card-text text-muted small">Metode seduh manual menghasilkan cita rasa kopi yang clean dan kaya rasa.</p>
+                        </div>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="price-tag">Rp 25.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Pairing%20Coffee%2C%20saya%20ingin%20memesan%20V60%20Manual%20Brew" target="_blank" class="btn btn-warning btn-block btn-order text-dark">
+                                <i class="fab fa-whatsapp mr-1"></i> Pesan Cepat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 3 (Resto) -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 menu-item resto">
+                <div class="card h-100 custom-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=300" alt="Rice Bowl">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge badge-light text-muted mb-2"><i class="fas fa-utensils text-warning mr-1"></i> Makanan</span>
+                            <h5 class="card-title font-weight-bold">Rice Bowl Sambal Matah</h5>
+                            <p class="card-text text-muted small">Ayam krispi gurih disiram sambal matah segar khas Pairing Resto.</p>
+                        </div>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="price-tag">Rp 35.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Pairing%20Coffee%2C%20saya%20ingin%20memesan%20Rice%20Bowl%20Sambal%20Matah" target="_blank" class="btn btn-warning btn-block btn-order text-dark">
+                                <i class="fab fa-whatsapp mr-1"></i> Pesan Cepat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produk 4 (Resto) -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 mb-4 menu-item resto">
+                <div class="card h-100 custom-card">
+                    <div class="img-container">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300" alt="Croissant">
+                    </div>
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <span class="badge badge-light text-muted mb-2"><i class="fas fa-utensils text-warning mr-1"></i> Makanan</span>
+                            <h5 class="card-title font-weight-bold">Butter Croissant</h5>
+                            <p class="card-text text-muted small">Pastry renyah dan lembut, teman terbaik untuk menemani kerja tulismu.</p>
+                        </div>
+                        <div class="mt-3">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="price-tag">Rp 20.000</span>
+                            </div>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Pairing%20Coffee%2C%20saya%20ingin%20memesan%20Butter%20Croissant" target="_blank" class="btn btn-warning btn-block btn-order text-dark">
+                                <i class="fab fa-whatsapp mr-1"></i> Pesan Cepat
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1 font-weight-bold text-warning">Pairing Coffee. (Resto & Space)</p>
+            <p class="mb-0 text-muted small">&copy; 2026 Pairing Coffee Pekanbaru. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- LOGIKA FILTER KATEGORI JAVASCRIPT -->
+    <script>
+        function filterMenu(kategori) {
+            // Mengatur tombol aktif
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Menyaring item produk
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                if (kategori === 'semua') {
+                    item.style.display = 'block';
+                } else if (item.classList.contains(kategori)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
