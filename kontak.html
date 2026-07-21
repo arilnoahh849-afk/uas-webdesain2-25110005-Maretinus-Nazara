@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Pairing Coffee</title>
+    <!-- Perbaikan: Mengubah class="stylesheet" menjadi rel="stylesheet" -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <!-- FontAwesome untuk ikon menarik -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS Tambahan khusus halaman kontak untuk keindahan visual */
+        .contact-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1498804103079-a6351b050096?q=80&w=1200') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .custom-card {
+            background: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: #fff3cd;
+            color: #856404;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s ease;
+        }
+        .form-control:focus {
+            border-color: #ffc107;
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+        }
+        .btn-custom {
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR COLLAPSE -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold text-warning" href="index.html">☕Pairing Coffee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <div class="contact-header mb-5">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Hubungi Kami</h1>
+            <p class="lead">Punya pertanyaan, kritik, saran, atau ingin memesan tempat di Space kami?</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <!-- Kolom Kiri: Informasi & Form -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+                
+                <!-- Info Detail -->
+                <div class="card custom-card p-4 mb-4">
+                    <h4 class="font-weight-bold mb-4">Informasi Kontak</h4>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h6 class="font-weight-bold mb-1">Alamat Kami</h6>
+                            <p class="text-muted mb-0">Jl. Jenderal Sudirman No. 369, Cinta Raja, Kec.Sail, Kota Pekanbaru, Riau 28126</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h6 class="font-weight-bold mb-1">Telepon / WhatsApp</h6>
+                            <p class="text-muted mb-0">(0761) 555-888 / +62 853-7660-6066</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h6 class="font-weight-bold mb-1">Email Resmi</h6>
+                            <p class="text-muted mb-0">hello@pairingcoffee.com</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Sosmed Quick Link -->
+                    <div class="text-center mt-2">
+                        <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success btn-sm mr-2 btn-custom px-3"><i class="fab fa-whatsapp mr-1"></i> WhatsApp</a>
+                        <a href="#" class="btn btn-danger btn-sm btn-custom px-3"><i class="fab fa-instagram mr-1"></i> Instagram</a>
+                    </div>
+                </div>
+
+                <!-- FORM KIRIM PESAN -->
+                <div class="card custom-card p-4">
+                    <h4 class="font-weight-bold mb-3">Kirim Pesan Langsung</h4>
+                    <p class="text-muted small">Pesan Anda sangat berarti bagi peningkatan kualitas layanan resto & space kami.</p>
+                    <hr>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nama" class="font-weight-bold">Nama Lengkap</label>
+                            <!-- Perbaikan: Menghilangkan class "form-group" di dalam input -->
+                            <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="font-weight-bold">Alamat Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="contoh@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan" class="font-weight-bold">Isi Pesan / Saran</label>
+                            <textarea class="form-control" id="pesan" rows="4" placeholder="Ketik pesan Anda di sini dengan jelas..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning btn-block btn-custom text-dark font-weight-bold">
+                            <i class="fas fa-paper-plane mr-2"></i>Kirim Sekarang
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Kolom Kanan: Peta Lokasi -->
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+                <div class="card custom-card p-4 h-100 d-flex flex-column">
+                    <h4 class="font-weight-bold mb-3">Lokasi Pekanbaru</h4>
+                    <p class="text-muted">Gunakan peta interaktif di bawah ini untuk memandu perjalananmu menuju ke lokasi kami.</p>
+                    <hr>
+                    <div class="map-container embed-responsive embed-responsive-1by1 flex-grow-1">
+                        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.688123282247!2d101.4431!3d0.51!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d5abcb1a!2sPekanbaru%2C%20Riau!5e0!3m2!1sid!2sid!4v1700000000000" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1 font-weight-bold text-warning">Pairing Coffee. (Resto & Space)</p>
+            <p class="mb-0 text-muted small">&copy; 2026 Pairing Coffee Pekanbaru. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 4 JS Dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
